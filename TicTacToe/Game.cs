@@ -9,27 +9,42 @@ namespace TicTacToe
     public class Game
     {
         private string[,] board;
-        Player CurrentPlayer { get; set; }
+        Player CurrentPlayer { get; set; } = new Player();
 
-        public Game(Player player)
+        public Game()
         {
-            board = new string [3,3];
-            CurrentPlayer = player;
+            board = new string [3,3];            
+            CurrentPlayer.Symbol = "X";
         }
 
-        public bool MakeMove(Player player, int row, int column)
+
+        //Метод проверяет может ли игрок совершить ход
+        public bool MakeMove(int row, int column)
         {
-            if (player.IsActive == false)
-                return false;
+            /*if (CurrentPlayer.IsActive == false)  //Возможно будет необходимо для реализации более продвинутого мультиплеера
+                return false;*/
 
             if (string.IsNullOrEmpty(board[row, column]))
             {
-                board[row, column] = player.Symbol;
+                board[row, column] = CurrentPlayer.Symbol;
                 return true;
             }
             return false;
         }
 
+        //Метод реализует смену хода у игроков
+        public void SwitchPlayer()
+        {
+            CurrentPlayer.Symbol = CurrentPlayer.Symbol == "X" ? "0" : "X";
+        }
+
+        //Метод получает текущего игрока
+        public string GetCurrentPlayer()
+        {
+            return CurrentPlayer.Symbol;
+        }
+
+        //Метод проверяет игровое поле на выйгрышные комбинации
         public bool CheckWin()
         {
             for(int row = 0; row < 3; row++)
@@ -61,6 +76,20 @@ namespace TicTacToe
             return false;
         }
 
+        //Метод проверяет заполнено ли игровое поле полностью
+        public bool IsBoardFull()
+        {
+            for(int row = 0;row < 3; row++)
+            {
+                for (int column = 0;column < 3; column++)
+                {
+                    if (string.IsNullOrEmpty(board[row, column])) return false;
+                }
+            }
+            return true;
+        }
+
+        //Метод сощдает новое чистое игровое поле
         public void Reset()
         {
             board = new string[3,3];
