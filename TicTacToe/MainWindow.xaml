@@ -22,10 +22,10 @@
 
         <Menu Grid.Row="0" Grid.ColumnSpan="3" VerticalAlignment="Center">
             <MenuItem Header="Game" VerticalAlignment="Center" FontSize="14" FontWeight="DemiBold" Height="25">
-                <MenuItem Header="New Game" FontSize="10"/>
-                <MenuItem Header="Exit game" FontSize="10"/>
+                <MenuItem x:Name="NewGame" Header="New Game" FontSize="10" Click="NewGame_Click"/>
+                <MenuItem x:Name="ExitGame" Header="Exit game" FontSize="10" Click="ExitGame_Click"/>
             </MenuItem>
-            <MenuItem Header="About" FontSize="14" FontWeight="DemiBold"/>
+            <MenuItem x:Name="About" Header="About" FontSize="14" FontWeight="DemiBold" Click="About_Click"/>
         </Menu>        
 
         <Button x:Name="A1" Grid.Column="0" Grid.Row="1" Width="120" Height="120" 

@@ -54,5 +54,21 @@ namespace TicTacToe
                 button.Content = String.Empty;
             }
         }
+
+        private void NewGame_Click(object sender, RoutedEventArgs e)
+        {
+            game.Reset();
+            ResetButtons();
+        }
+
+        private void ExitGame_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void About_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Игра крестики-нолики. Разработана Goncharov M.");
+        }
     }
 }
