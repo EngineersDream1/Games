@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TicTacToe.Views;
 
 namespace TicTacToe
 {
@@ -24,6 +25,10 @@ namespace TicTacToe
         public MainWindow()
         {
             InitializeComponent();
+            IsEnabled = false;
+            UserAuth userAuth = new UserAuth();
+            userAuth.Show();
+
             game = new Game();
         }
 
