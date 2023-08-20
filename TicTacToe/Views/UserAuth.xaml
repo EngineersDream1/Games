@@ -11,9 +11,9 @@
             <TextBlock Text="Имя игрока: " FontSize="28" FontWeight="DemiBold" Margin="5"/>
             <TextBox x:Name="NameTxt" FontSize="28" FontWeight="DemiBold" Margin="5 0 5 5"/>
             <TextBlock Text="Пароль: " FontSize="28" FontWeight="DemiBold" Margin="5 0 5 5"/>
-            <TextBox x:Name="passTxt" FontSize="28" FontWeight="DemiBold" Margin="5 0 5 5"/>
-            <Button x:Name="entrBtn" Content="Войти/Зарегестрироваться" FontSize="18" FontWeight="DemiBold"
-                    Height="50"/>
+            <TextBox x:Name="PassTxt" FontSize="28" FontWeight="DemiBold" Margin="5 0 5 5"/>
+            <Button x:Name="EntrBtn" Content="Войти/Зарегестрироваться" FontSize="18" FontWeight="DemiBold"
+                    Height="50" Click="entrBtn_Click"/>
         </StackPanel>
     </Grid>
 </Window>

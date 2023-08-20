@@ -28,6 +28,7 @@ namespace TicTacToe
             IsEnabled = false;
             UserAuth userAuth = new UserAuth();
             userAuth.Show();
+            
 
             game = new Game();
         }

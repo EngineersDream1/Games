@@ -19,9 +19,23 @@ namespace TicTacToe.Views
     /// </summary>
     public partial class UserAuth : Window
     {
+        private Client client;
+
         public UserAuth()
         {
             InitializeComponent();
+        }
+
+        private void EntrBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if(string.IsNullOrEmpty(NameTxt.Text) || string.IsNullOrEmpty(PassTxt.Text))
+            {
+                return;
+            }
+            else
+            {
+                client = new Client();
+            }
         }
     }
 }
