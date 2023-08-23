@@ -5,15 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TicTacToe.Views"
         mc:Ignorable="d"
-        Title="UserAuth" Height="450" Width="450" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="UserAuth" Height="450" Width="450" ResizeMode="NoResize"
+        Icon="\Source\userIcon.png" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="Имя игрока: " FontSize="28" FontWeight="DemiBold" Margin="5"/>
             <TextBox x:Name="NameTxt" FontSize="28" FontWeight="DemiBold" Margin="5 0 5 5"/>
             <TextBlock Text="Пароль: " FontSize="28" FontWeight="DemiBold" Margin="5 0 5 5"/>
             <TextBox x:Name="PassTxt" FontSize="28" FontWeight="DemiBold" Margin="5 0 5 5"/>
-            <Button x:Name="EntrBtn" Content="Войти/Зарегестрироваться" FontSize="18" FontWeight="DemiBold"
-                    Height="50" Click="entrBtn_Click"/>
+            
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="EntrBtn" Content="Войти" FontSize="18" FontWeight="DemiBold"
+        Height="50" Click="EntrBtn_Click" Margin="0 0 20 0"/>
+                <Button x:Name="RegBtn" Content="Зарегистрироваться" FontSize="18" FontWeight="DemiBold"
+        Height="50" Click="RegBtn_Click"/>
+            </StackPanel>    
+            
         </StackPanel>
     </Grid>
 </Window>

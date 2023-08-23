@@ -9,10 +9,14 @@
 
   <ItemGroup>
     <None Remove="Source\icon.png" />
+    <None Remove="Source\userIcon.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Source\icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Source\userIcon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

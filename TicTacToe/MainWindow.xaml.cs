@@ -21,36 +21,31 @@ namespace TicTacToe
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Game game;
+        //private Game game;
         public MainWindow()
         {
             InitializeComponent();
-            IsEnabled = false;
-            UserAuth userAuth = new UserAuth();
-            userAuth.Show();
-            
-
-            game = new Game();
+            //game = new Game();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Button button = (Button)sender;
-            int row = Grid.GetRow(button) - 1;
-            int column = Grid.GetColumn(button);
+            //Button button = (Button)sender;
+            //int row = Grid.GetRow(button) - 1;
+            //int column = Grid.GetColumn(button);
 
-            if(game.MakeMove(row, column))
-            {
-                button.Content = game.GetCurrentPlayer();
-                if (game.CheckWin())
-                {
-                    MessageBox.Show("Игрок " + game.GetCurrentPlayer().ToString() + " победил!");
-                    game.Reset();
-                    ResetButtons();
-                    return;
-                }
-                game.SwitchPlayer();
-            }            
+            //if(game.MakeMove(row, column))
+            //{
+            //    button.Content = game.GetCurrentPlayer();
+            //    if (game.CheckWin())
+            //    {
+            //        MessageBox.Show("Игрок " + game.GetCurrentPlayer().ToString() + " победил!");
+            //        game.Reset();
+            //        ResetButtons();
+            //        return;
+            //    }
+            //    game.SwitchPlayer();
+            //}            
         }
 
         private void ResetButtons()
@@ -63,18 +58,18 @@ namespace TicTacToe
 
         private void NewGame_Click(object sender, RoutedEventArgs e)
         {
-            game.Reset();
-            ResetButtons();
+            //game.Reset();
+            //ResetButtons();
         }
 
         private void ExitGame_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            //this.Close();
         }
 
         private void About_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Игра крестики-нолики. Разработана Goncharov M.");
+            //MessageBox.Show("Игра крестики-нолики. Разработана Goncharov M.");
         }
     }
 }
